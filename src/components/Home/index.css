@@ -1,0 +1,53 @@
+.second-banner {
+  background-image:
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.banner h4 {
+  font-size: 1.2em;
+}
+
+.banner h2 {
+  font-size: 4em;
+}
+
+.second-banner {
+  display: flex;
+  flex-flow: row;
+}
+
+.main-content {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+  text-align: right;
+  flex-shrink: 1;
+}
+
+.second-banner p{
+  flex-flow: column wrap;
+}
+
+#foundation {
+  text-align: center;
+}
+
+.bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.content img {
+  position: relative;
+}
+
+.left-content .middle-content .right-content h2 {
+  position: absolute;
+}
