@@ -1,0 +1,52 @@
+html, body, div, h1, h2, h3, h4, h5, h6, p, {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+.container-react {
+  display: flex;
+}
+
+.sidepanel {
+  z-index: 10;
+  background-color: white;
+  top: 0px;
+  border-right: 1px solid rgb(201, 201, 201);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  height: 100vh;
+  width: 25vw;
+}
+
+.container-sidepanel {
+  background-color: white;
+  display: flex;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  height: 6vh;
+}
+
+h1 {
+  font-size: 18px;
+  color: #394c5b;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.Map {
+  max-height: 100vh;
+  max-width: 75vw;
+  display: flex;
+  flex-direction: row;
+}

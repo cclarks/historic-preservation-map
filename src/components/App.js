@@ -5,14 +5,14 @@ import {  Route, Router } from 'react-router-dom'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
-import SideBar from './Header/index.js'
-import Source from './Source'
-import Layer from './Layer'
-import Basemap from './BaseMap'
-import Home from './Home/index.js'
-import Map from './Map'
-import About from './About/index.js'
-// import Checkbox from 'material-ui/Checkbox'
+import SideBar from './SideBar/index.js'
+
+import Source from './Map/Source.js'
+import Layer from './Map/Layer.js'
+import Basemap from './Map/BaseMap.js'
+import Map from './Map/Map.js'
+
+import './App.css'
 
 injectTapEventPlugin()
 
@@ -36,20 +36,16 @@ class App extends Component {
 
   render() {
     return (
-        <div id="outer-container">
-          <main id="page-wrap">
-            <SideBar />
-            <Home />
-              {/* <Router>
-                <Route path="/" component={Home} />
-                <Route path="about" component={Map}/>
-                <Route path="map" />
-              </Router> */}
-            {/* <Map>
+      <div class="content">
+        <div class="container-react">
+          <SideBar />
+
+          <div class="Map">
+            <Map>
                <Source
                  id='sourceID'
-                 url='mapbox://aliceatd2d.1skjaazb'
-                 layer='railwayLines-2es0gk'
+                 url='mapbox://codyclarks.historic-data'
+                 layer='codyclarks.historic-data'
                >
                  <Layer
                    id='line-layer'
@@ -60,7 +56,7 @@ class App extends Component {
                    sliderValue={this.state.sliderValue}
                    isLayerChecked={this.state.teal.isLayerChecked}
                  />
-                 <Layer
+                 {/* <Layer
                    id='fill-layer'
                    type='fill'
                    paint={{
@@ -68,20 +64,20 @@ class App extends Component {
                    }}
                    sliderValue={this.state.sliderValue}
                    isLayerChecked={this.state.purple.isLayerChecked}
-                 />
+                 /> */}
                </Source>
                <Basemap
                  isLayerChecked={this.state.orange.isLayerChecked}
                />
-             </Map> */}
-           <section className="footer">
-             <div className="footer-div">
-               <a href="/home">Home</a>
-               <a href="/map">Map</a>
-               <a href="/about">About</a>
-             </div>
-           </section>
-        </main>
+             </Map>
+          </div>
+        </div>
+        <section className="footer">
+          <div className="footer-div">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+          </div>
+        </section>
       </div>
     )
   }
