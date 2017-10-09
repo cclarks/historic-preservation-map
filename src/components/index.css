@@ -1,4 +1,4 @@
-html, body, div, h1, h2, h3, h4, h5, h6, p, canvas {
+/*html, body, div, h1, h2, h3, h4, h5, h6, p, canvas {
   display: block;
   margin: 0;
   padding: 0;
@@ -14,4 +14,4 @@ body {
 .container-react {
   display: flex;
   flex-direction: row;
-}
+}*/

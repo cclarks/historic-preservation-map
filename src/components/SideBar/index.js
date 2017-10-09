@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import './index.css'
 
 import '../App.css'
+import Gibson from '../../assets/gibson-inn.jpg'
+import Library from '../../assets/library.svg'
 
 export default class SideBar extends Component {
   render() {
@@ -11,11 +13,12 @@ export default class SideBar extends Component {
           <div className="wrapper">
               <div className="container-header">
                 <div className="icon">
-                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">{Library}
                   </svg>
                 </div>
                 <div className="search">
-                  <svg></svg>
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                  </svg>
                   <input className="input" type="search" placeholder="Search site" />
                 </div>
                 <div className="container-sort">
@@ -23,24 +26,26 @@ export default class SideBar extends Component {
                     Sort:
                   </div>
                   <select className="sort-select" >
+                    <option value="all">All</option>
                     <option value="site-name">Site Name</option>
                     <option value="year-built">Year Built</option>
                     <option value="address">Address</option>
-                    <option value="all">All</option>
                   </select>
                 </div>
               </div>
                 <div className="list">
                   <div className="container-description">
-                    <div className="description-main">
-                      <h1>Site Name</h1>
-                    </div>
-                    <div className="description-secondary">
-                      <span className="address">Address</span>
-                      <span className="year-built">| Year Built</span>
+                    <div className="description">
+                      <div className="description-main">
+                        <h1>Site Name</h1>
+                      </div>
+                      <div className="description-secondary">
+                        <span className="address">Address</span>
+                        <span className="year-built">| Year Built</span>
+                      </div>
                     </div>
                     <div class="image">
-                      <img src="" alt="" />
+                      <img src={Gibson} alt="" />
                     </div>
                   </div>
                   </div>
