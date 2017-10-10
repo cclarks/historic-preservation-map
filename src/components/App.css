@@ -41,14 +41,19 @@ h1 {
   display: flex;
   font-family: 'Open Sans Condensed', sans-serif;
   text-decoration: none;
+  width: 100vw;
 }
 
 .footer-div {
   display: flex;
-  flex: 4;
-  justify-content: space-between;
+  width: 100vw;
+  justify-content: center;
 }
 
-a {
-
+.footer-div a {
+  text-decoration: none;
+  width: 25vw;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
 }

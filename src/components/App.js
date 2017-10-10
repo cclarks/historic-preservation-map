@@ -17,24 +17,13 @@ import './App.css'
 injectTapEventPlugin()
 
 class App extends Component {
+
   showSettings (event) {
   event.preventDefault();
 }
 
-  state = {
-    sliderValue: 0.5,
-    teal: {
-      isLayerChecked: true
-    },
-    purple: {
-      isLayerChecked: false
-    },
-    orange: {
-      isLayerChecked: false
-    }
-  }
-
   render() {
+
     return (
       <div class="content">
         <div className="content-wrapper">
@@ -54,8 +43,6 @@ class App extends Component {
                       paint={{
                         'line-color': 'teal'
                       }}
-                      sliderValue={this.state.sliderValue}
-                      isLayerChecked={this.state.teal.isLayerChecked}
                     />
                     {/* <Layer
                       id='fill-layer'
@@ -68,7 +55,6 @@ class App extends Component {
                   /> */}
                 </Source>
                 <Basemap
-                  isLayerChecked={this.state.orange.isLayerChecked}
                 />
               </Map>
             </div>
@@ -78,7 +64,7 @@ class App extends Component {
               <a href="/home">Home</a>
               <a href="/about">About</a>
             </div>
-          </section>  
+          </section>
         </div>
       </div>
     )

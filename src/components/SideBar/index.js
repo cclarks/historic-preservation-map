@@ -1,56 +1,116 @@
 import React, {Component} from 'react'
+// import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import './index.css'
 
 import '../App.css'
 import Gibson from '../../assets/gibson-inn.jpg'
-import Library from '../../assets/library.svg'
+import Sites from '../Sites/'
+import Header from '../Sites/Header.js'
+import data from '../../assets/sites-data.json'
+
+let sortYears = function (a, b) {
+  let nameA = (a.properties.YEARBUILT || '').toUpperCase();
+  let nameB = (b.properties.YEARBUILT || '').toUpperCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  // names must be equal
+  return 0;
+}
+
+let sortNames = function(a, b) {
+  let nameA = a.properties.SITENAME.toUpperCase(); // ignore upper and lowercase
+  let nameB = b.properties.SITENAME.toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  // names must be equal
+  return 0;
+}
+
+let sortAddresses = function(a, b) {
+  let nameA = (a.properties.ADDRESS || '').toUpperCase(); // ignore upper and lowercase
+  let nameB = (b.properties.ADDRESS || '').toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  // names must be equal
+  return 0;
+}
 
 export default class SideBar extends Component {
+  constructor() {
+    super()
+    this.state = {
+      sites: [],
+      search: '',
+      sort: 'site-name'
+    }
+  }
+
+  updateSearch = (event) => {
+    console.log(event.target.value)
+    this.setState({search: event.target.value.substr(0, 25)})
+  }
+
+  setSort = (event) => {
+    this.setState({sort: event.target.value})
+  }
+
+  componentWillMount() {
+
+  }
+
   render() {
+    let {features} = data
+    let filterSites = features.filter(
+      (site) => {
+        return (
+          site.properties.SITENAME.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+          (site.properties.ADDRESS || '').toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+          (site.properties.YEARBUILT || '').toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+        )
+      }
+    )
+
+    switch (this.state.sort) {
+      case 'year-built':
+        filterSites.sort(sortYears);
+        break;
+      case 'address':
+        filterSites.sort(sortAddresses);
+        break;
+      case 'site-name':
+      default:
+        filterSites.sort(sortNames);
+        break
+    }
+
     return (
       <div className="about">
         <div className="sidepanel">
           <div className="wrapper">
-              <div className="container-header">
-                <div className="icon">
-                  <svg width="24px" height="24px" viewBox="0 0 24 24">{Library}
-                  </svg>
-                </div>
-                <div className="search">
-                  <svg width="24px" height="24px" viewBox="0 0 24 24">
-                  </svg>
-                  <input className="input" type="search" placeholder="Search site" />
-                </div>
-                <div className="container-sort">
-                  <div className="sort-label">
-                    Sort:
-                  </div>
-                  <select className="sort-select" >
-                    <option value="all">All</option>
-                    <option value="site-name">Site Name</option>
-                    <option value="year-built">Year Built</option>
-                    <option value="address">Address</option>
-                  </select>
-                </div>
+            <Header
+              search={this.state.search}
+              updateSearch={this.updateSearch}
+              setSort={this.setSort}
+            />
+              <div className="list">
+                {filterSites.map(site =>
+                    <Sites key={site.properties.SITEID} properties={site.properties} />
+                )}
               </div>
-                <div className="list">
-                  <div className="container-description">
-                    <div className="description">
-                      <div className="description-main">
-                        <h1>Site Name</h1>
-                      </div>
-                      <div className="description-secondary">
-                        <span className="address">Address</span>
-                        <span className="year-built">| Year Built</span>
-                      </div>
-                    </div>
-                    <div class="image">
-                      <img src={Gibson} alt="" />
-                    </div>
-                  </div>
-                  </div>
-                </div>
-            </div>
+          </div>
+        </div>
       </div>
     )
   }
