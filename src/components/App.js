@@ -5,7 +5,7 @@ import {  Route, Router } from 'react-router-dom'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
-import SideBar from './SideBar/index.js'
+import SideBar from './SideBar/testIndex.js'
 
 import Source from './Map/Source.js'
 import Layer from './Map/Layer.js'
@@ -44,15 +44,13 @@ class App extends Component {
                         'line-color': 'teal'
                       }}
                     />
-                    {/* <Layer
+                    <Layer
                       id='fill-layer'
                       type='fill'
                       paint={{
                       'fill-color': 'purple'
                     }}
-                    sliderValue={this.state.sliderValue}
-                    isLayerChecked={this.state.purple.isLayerChecked}
-                  /> */}
+                  />
                 </Source>
                 <Basemap
                 />

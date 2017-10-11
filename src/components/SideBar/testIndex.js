@@ -3,12 +3,14 @@ import { Switch, Route } from 'react-router-dom'
 import './index.css'
 
 import '../App.css'
-import Gibson from '../../assets/gibson-inn.jpg'
-import Sites from '../Sites/'
-import Header from '../Sites/Header.js'
+// import Gibson from '../../assets/gibson-inn.jpg'
+// import Sites from '../Sites/'
+// import Header from '../Sites/Header.js'
 import data from '../../assets/sites-data.json'
-import siteAll from '../Sites/allInfo.js'
-import AllSites from '/AllSites.js'
+import allinfoTest from '../Sites/allInfoTest.js'
+import allSitesTest from './AllSitesTest.js'
+// import siteAll from '../Sites/allInfo.js'
+// import AllSites from '/AllSites.js'
 
 let sortYears = function (a, b) {
   let nameA = (a.properties.YEARBUILT || '').toUpperCase();
@@ -102,12 +104,8 @@ export default class SideBar extends Component {
         <div className="sidepanel">
           <div className="wrapper">
             <Switch>
-              <Route path='/sites' render={(props) => (
-                <div>
-                  <Route exact path="/sites" component={AllSites} />
-                  <Route path="/sites:siteID" component={siteAll} />
-                </div>
-              )} />
+              <Route exact path="/" component={allSitesTest} />
+              <Route path="/anything" component={allinfoTest} />
             </Switch>
           </div>
         </div>
@@ -115,13 +113,3 @@ export default class SideBar extends Component {
     )
   }
 }
-/* <Header
-search={this.state.search}
-updateSearch={this.updateSearch}
-setSort={this.setSort}
-/>
-<div className="list">
-{filterSites.map(site =>
-<Sites key={site.properties.SITEID} properties={site.properties} />
-)}
-</div> */
