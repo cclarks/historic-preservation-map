@@ -5,12 +5,12 @@ import {  Route, Router } from 'react-router-dom'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
-import SideBar from './SideBar/testIndex.js'
+import SideBar from './SideBar/index'
 
-import Source from './Map/Source.js'
-import Layer from './Map/Layer.js'
-import Basemap from './Map/BaseMap.js'
-import Map from './Map/Map.js'
+import Source from './Map/Source'
+import Layer from './Map/Layer'
+import Basemap from './Map/BaseMap'
+import Map from './Map/Map'
 
 import './App.css'
 

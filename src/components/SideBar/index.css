@@ -109,17 +109,19 @@ input, textarea, select, button {
   align-self: center;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  list-style: none;
 }
 
-.description-main {
+.description-main-all-sites {
   flex: 8;
 }
 
-.description-main h1 {
+.description-main-all-sites h1 {
   text-align: left;
 }
 
-.description-secondary {
+.description-secondary-all-sites {
   color: #a8aebf;
   font-weight: 300;
   margin-top: 6px;

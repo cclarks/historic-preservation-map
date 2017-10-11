@@ -4,10 +4,10 @@ import React, { Component } from 'react'
 const Sites = (props) =>
         <div className="container-description">
           <div className="description">
-              <div className="description-main">
+              <div className="description-main-all-sites">
                 <h1 key={props.properties.SITEID}>{props.properties.SITENAME}</h1>
               </div>
-              <div className="description-secondary">
+              <div className="description-secondary-all-sites">
                 <span className="address">{props.properties.ADDRESS} </span>
                 <span className="year-built"> | {props.properties.YEARBUILT}</span>
               </div>
