@@ -21,17 +21,25 @@ class Map extends Component {
 
     const map = new MapboxGl.Map({
       container: this.container,
-    //  style: "mapbox://styles/codyclarks/cj8emxv3ea7fw2ro4i6bstrqx",
-    style :"mapbox://styles/codyclarks/cj8euvletafbj2rksdkeqktvo",
+      // style: "mapbox://styles/codyclarks/cj8emxv3ea7fw2ro4i6bstrqx",
+    //style :"mapbox://styles/codyclarks/cj8euvletafbj2rksdkeqktvo",
+     style:"mapbox://styles/codyclarks/cj8euvletafbj2rksdkeqktvo",
       center: [-84.993639, 29.7271173],
       zoom: 15,
-      "sources": {
-           "raster-tiles": {
-               "type": "raster",
-               "url": "mapbox://codyclarks.historic-data",
-               "tileSize": 256
-           }
-       }
+      "layers": [{
+                   "id": "town-data",
+                   "type": "raster",
+                   "source": "codyclarks.5b5ed4cw",
+                   "minzoom": 0,
+                   "maxzoom": 20
+               }]
+      // "sources": {
+      //      "raster-tiles": {
+      //          "type": "raster",
+      //          "url": "mapbox://codyclarks.historic-data",
+      //          "tileSize": 256
+      //      }
+      //  }
     });
 
     // map.flyTo({ center: [13.29, 52.51], zoom: 9 })
@@ -56,24 +64,24 @@ class Map extends Component {
       this.setState({ map });
     });
 
-      map.on('click', function(e) {
-        let features = map.queryRenderedFeatures(e.point, {
-          layers: ['original'],
-        });
+    map.on('click', function(e) {
+      let features = map.queryRenderedFeatures(e.point, {
+        layers: ['original'],
+      });
 
-        if (!features.length) {
-          return;
-        }
+      if (!features.length) {
+        return;
+      }
 
-        let feature = features[0];
+      let feature = features[0];
 
-          console.log("clicked", feature)
+        console.log("clicked", feature)
 
-        let popup = new MapboxGl.Popup({ offset: [0, 0] })
-          .setLngLat(feature.geometry.coordinates)
-          .setHTML('<h3>' + feature.properties.SITENAME + '</h3>')
-           .setLngLat(feature.geometry.coordinates)
-          .addTo(map);
+      let popup = new MapboxGl.Popup({ offset: [0, 0] })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<h3 class="map-info-box">' + feature.properties.SITENAME + '</h3>')
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
 
 
   });

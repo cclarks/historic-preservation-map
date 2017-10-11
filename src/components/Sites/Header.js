@@ -14,7 +14,7 @@ class Header extends Component {
           </svg>
         </div>
         <div className="search">
-          <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+          <a href=""><i className="fa fa-search" aria-hidden="true"></i></a>
           <input className="input"
             type="search"
             placeholder="Search site"

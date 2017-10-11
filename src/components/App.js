@@ -25,32 +25,19 @@ class App extends Component {
   render() {
 
     return (
-      <div class="content">
+      <div className="content">
         <div className="content-wrapper">
-          <div class="container-react">
+          <div className="container-react">
             <SideBar />
 
-            <div class="Map">
+            <div className="Map">
               <Map>
                 <Source
                   id='sourceID'
                   url='mapbox://codyclarks.historic-data'
                   layer='codyclarks.historic-data'
                   >
-                    <Layer
-                      id='line-layer'
-                      type='line'
-                      paint={{
-                        'line-color': 'teal'
-                      }}
-                    />
-                    <Layer
-                      id='fill-layer'
-                      type='fill'
-                      paint={{
-                      'fill-color': 'purple'
-                    }}
-                  />
+
                 </Source>
                 <Basemap
                 />

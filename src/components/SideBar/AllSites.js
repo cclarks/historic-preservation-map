@@ -19,8 +19,8 @@ class AllSites extends Component {
           setSort={this.props.setSort}
         />
         <div className="list">
-          {this.props.filterSites.map(site =>
-            <Link to={`/sites/${site.properties.SITEID}`}>
+          {this.props.filterSites.map((site,i) =>
+            <Link to={`/sites/${site.properties.SITEID}`} key={i}>
               <Sites key={site.properties.SITEID} properties={site.properties} />
             </Link>
           )}
