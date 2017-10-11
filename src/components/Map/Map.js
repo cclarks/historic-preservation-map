@@ -22,7 +22,7 @@ class Map extends Component {
     const map = new MapboxGl.Map({
       container: this.container,
     //  style: "mapbox://styles/codyclarks/cj8emxv3ea7fw2ro4i6bstrqx",
-    style :"mapbox://styles/mapbox/navigation-guidance-day-v2",
+    style :"mapbox://styles/codyclarks/cj8euvletafbj2rksdkeqktvo",
       center: [-84.993639, 29.7271173],
       zoom: 15,
       "sources": {
@@ -71,7 +71,7 @@ class Map extends Component {
 
         let popup = new MapboxGl.Popup({ offset: [0, 0] })
           .setLngLat(feature.geometry.coordinates)
-          .setHTML('<h3>' + feature.properties.SITENAME + '</h3><p>' + feature.properties.YEARBUILT + '</p>')
+          .setHTML('<h3>' + feature.properties.SITENAME + '</h3>')
            .setLngLat(feature.geometry.coordinates)
           .addTo(map);
 

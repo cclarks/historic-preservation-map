@@ -59,8 +59,7 @@ class App extends Component {
           </div>
           <section className="footer">
             <div className="footer-div">
-              <a href="/home">Home</a>
-              <a href="/about">About</a>
+              <a href="http://www.codyclark.co" target="_blank">Learn More About The Developer</a>
             </div>
           </section>
         </div>

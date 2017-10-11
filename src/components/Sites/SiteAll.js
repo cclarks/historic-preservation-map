@@ -76,8 +76,37 @@ export default class SiteAll extends Component {
                 <span className="site-descript ext-plan">
                   <h3>Ext Plan: </h3> {site.properties.EXTPLAN}
                 </span>
+                <span className="site-descript strucsys1">
+                  <h3>STRUCSYS1: </h3> {site.properties.STRUCSYS1}
+                </span>
+                <span className="site-descript strucsys2">
+                  <h3>STRUCSYS2: </h3> {site.properties.STRUCSYS2}
+                </span>
+                <span className="site-descript strucsys3">
+                  <h3>STRUCSYS3: </h3> {site.properties.STRUCSYS3}
+                </span>
+                <span className="site-descript extfabric1">
+                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC1}
+                </span>
+                <span className="site-descript extfabric2">
+                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC2}
+                </span>
+                <span className="site-descript extfabric3">
+                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC3}
+                </span>
+                <span className="site-descript extfabric4">
+                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC4}
+                </span>
+                <span className="site-descript strucuse1">
+                  <h3>STRUCTURE USE 1: </h3> {site.properties.STRUCUSE1}
+                </span>
+                <span className="site-descript strucuse2">
+                  <h3>STRUCTURE USE 2: </h3> {site.properties.STRUCUSE2}
+                </span>
+                <span className="site-descript strucuse3">
+                  <h3>STRUCTURE USE 3: </h3> {site.properties.STRUCUSE3}
+                </span>
               </div>
-
           </div>
         </div>
       )
