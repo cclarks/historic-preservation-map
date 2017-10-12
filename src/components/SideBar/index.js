@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './index.css'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 import '../App.css'
 import data from '../../assets/sites-data.json'
@@ -98,17 +99,28 @@ export default class SideBar extends Component {
       <div className="about">
         <div className="sidepanel">
           <div className="wrapper">
-            <Switch>
-              <Route exact path="/" render={() => (
-                <AllSites
-                  search={this.state.search}
-                  updateSearch={this.updateSearch}
-                  setSort={this.setSort}
-                  filterSites={filterSites}
-                />
-              )} />
-              <Route path="/sites/:siteId" component={SiteAll} />
-            </Switch>
+            <Route render={({ location }) => (
+                <CSSTransitionGroup
+                  transitionName="fade"
+                  transitionEnterTimeout={300}
+                  transitionLeaveTimeout={300}
+                >
+                  <Switch location={location} key={location.key}>
+                    <Route exact path="/" render={() => (
+                      <AllSites
+                        search={this.state.search}
+                        updateSearch={this.updateSearch}
+                        setSort={this.setSort}
+                        filterSites={filterSites}
+                      />
+                    )} />
+                    <Route
+                      path="/sites/:siteId"
+                      component={SiteAll}
+                    />
+                </Switch>
+                </CSSTransitionGroup>
+            )}/>
           </div>
         </div>
       </div>

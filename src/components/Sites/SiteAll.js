@@ -18,7 +18,7 @@ export default class SiteAll extends Component {
           <div className="header">
             <Link to={"/"}>
               <div className="back-button">
-                <a href={AllSites}>I Class</a>
+                <a href={AllSites}><i className="fa fa-2x fa-chevron-left" aria-hidden="true"></i></a>
               </div>
             </Link>
           </div>

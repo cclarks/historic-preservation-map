@@ -1,8 +1,10 @@
 {
   "name": "historic-preservation-map",
+  "homepage": "http://codyclark.co/historic-preservation-map/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "lodash": "^4.17.4",
     "mapbox-gl": "^0.40.1",
     "material-ui": "^0.19.3",
@@ -15,12 +17,15 @@
     "react-router-dom": "^4.2.2",
     "react-router-native": "^4.2.0",
     "react-scripts": "1.0.13",
-    "react-tap-event-plugin": "^3.0.2"
+    "react-tap-event-plugin": "^3.0.2",
+    "react-transition-group": "1.x"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build --history-api-fallback",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

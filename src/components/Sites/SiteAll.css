@@ -23,6 +23,14 @@
   border-right: 1px solid rgb(156, 156, 156);
 }
 
+.fa-chevron-left {
+  color:rgb(156, 156, 156);
+}
+
+.fa-chevron-left:hover {
+  color: rgb(51, 155, 166);
+}
+
 .all-info {
   padding: 20px 32px;
   flex: 1;

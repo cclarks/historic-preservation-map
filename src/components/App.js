@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import { render } from 'react-dom'
-import {  Route, Router } from 'react-router-dom'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 import SideBar from './SideBar/index'
 
 import Source from './Map/Source'
-import Layer from './Map/Layer'
 import Basemap from './Map/BaseMap'
 import Map from './Map/Map'
 
@@ -36,17 +34,16 @@ class App extends Component {
                   id='sourceID'
                   url='mapbox://codyclarks.historic-data'
                   layer='codyclarks.historic-data'
-                  >
+                >
 
                 </Source>
-                <Basemap
-                />
+                <Basemap />
               </Map>
             </div>
           </div>
           <section className="footer">
             <div className="footer-div">
-              <a href="http://www.codyclark.co" target="_blank">Learn More About The Developer</a>
+              <a href="http://www.codyclark.co" target="_blank" rel="noopener noreferrer">Learn More About The Developer</a>
             </div>
           </section>
         </div>

@@ -36,6 +36,11 @@
   min-width: 5vw;
 }
 
+.fa-search {
+  color:rgb(156, 156, 156);
+  margin-right: .5em;
+}
+
 .search {
   display: flex;
   justify-content: center;
@@ -47,7 +52,7 @@
   height: 7vh;
   border: none;
   font-size: 12px;
-  padding-left: 36px;
+  padding: 15px;
   box-sizing: border-box;
   color: rgb(156, 156, 156);
   font-weight: 100;
@@ -56,7 +61,8 @@
 input {
   user-select: text;
   cursor: auto;
-  padding: 1px;
+  margin-left: 12px;
+  /*padding: 1px;*/
 }
 
 input, textarea, select, button {
@@ -127,6 +133,10 @@ input, textarea, select, button {
   text-decoration: none;
 }
 
+.description-main-all-sites h1:hover {
+  color: rgb(51, 155, 166);
+}
+
 .description-secondary-all-sites {
   color: #a8aebf;
   font-weight: 300;
@@ -136,11 +146,10 @@ input, textarea, select, button {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-
 }
 
 .address, .year-built {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   color: #808492;
@@ -152,4 +161,14 @@ input, textarea, select, button {
   align-items: center;
   justify-content: flex-end;
   padding-right: 10px;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 }

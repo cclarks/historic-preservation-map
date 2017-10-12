@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import MapboxGl from "mapbox-gl/dist/mapbox-gl.js";
-import { RotationControl } from "react-mapbox-gl";
 import { withRouter } from 'react-router-dom'
 
 class Map extends Component {
@@ -41,14 +40,14 @@ class Map extends Component {
     // map.legendControl.addLegend('<strong>My walk from the White House to the hill!</strong>');
 
 
-    map.flyTo({
-      center: [-84.993639, 29.7271173],
-      zoom: 15,
-      duration: 1,
-      easing(t) {
-        return t;
-      }
-   })
+  //   map.flyTo({
+  //     center: [-84.993639, 29.7271173],
+  //     zoom: 15,
+  //     duration: 1,
+  //     easing(t) {
+  //       return t;
+  //     }
+  //  })
 
     map.on("load", (...args) => {
       map.addLayer({
@@ -91,13 +90,13 @@ class Map extends Component {
       this.props.history.push(`/sites/${feature.properties.SITEID}`)
     });
 
-    map.on('mouseenter', 'places', function(e) {
-      map.getCanvas().style.cursor = 'pointer';
-    });
+    // map.on('mouseenter', 'places', function(e) {
+    //   map.getCanvas().style.cursor = 'pointer';
+    // });
 
-    map.on('mouseleave', 'places', function () {
-      map.getCanvas().style.cursor = '';
-    });
+    // map.on('mouseleave', 'places', function () {
+    //   map.getCanvas().style.cursor = '';
+    // });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
