@@ -49,12 +49,14 @@ h1 {
   display: flex;
   width: 100vw;
   justify-content: center;
+  align-items: center;
 }
 
 .footer-div a {
   text-decoration: none;
   width: 25vw;
   align-items: center;
+  align-self: center;
   text-align: center;
   text-transform: capitalize;
 }

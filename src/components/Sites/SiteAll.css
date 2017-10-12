@@ -31,7 +31,7 @@
 }
 
 .all-info h1 {
-  font-size: 24px;
+  font-size: 27px;
   line-height: 32px;
   padding: 4px 0px;
   font-weight: bold;
@@ -43,8 +43,8 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 4px 0px;
-  margin-top: 12px;
-  line-height: 26px;
+  /*margin-top: 12px;*/
+  /*line-height: 26px;*/
   overflow: auto;
 }
 
@@ -53,6 +53,10 @@
   flex-direction: row;
 }
 
-.site-descript h3 {
+.site-descript {
   margin-bottom: .5em;
+}
+
+.site-descript h3 {
+  font-weight: bold;
 }

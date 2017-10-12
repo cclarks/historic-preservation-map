@@ -3,9 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import './index.css'
 
 import '../App.css'
-// import Gibson from '../../assets/gibson-inn.jpg'
-// import Sites from '../Sites/'
-// import Header from '../Sites/Header.js'
 import data from '../../assets/sites-data.json'
 import AllSites from './AllSites'
 import SiteAll from '../Sites/SiteAll'
@@ -118,13 +115,3 @@ export default class SideBar extends Component {
     )
   }
 }
-/* <Header
-search={this.state.search}
-updateSearch={this.updateSearch}
-setSort={this.setSort}
-/>
-<div className="list">
-{filterSites.map(site =>
-<Sites key={site.properties.SITEID} properties={site.properties} />
-)}
-</div> */

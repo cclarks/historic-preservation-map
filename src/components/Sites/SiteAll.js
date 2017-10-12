@@ -6,9 +6,6 @@ import './SiteAll.css'
 
 
 export default class SiteAll extends Component {
-  constructor() {
-    super()
-  }
 
   render () {
     const site = data.features.find((site) => {
@@ -26,12 +23,12 @@ export default class SiteAll extends Component {
             </Link>
           </div>
           <div className="all-info">
-              <h1 key={site.properties.SITEID}>Site Name: {site.properties.SITENAME}</h1>
+              <h1 key={site.properties.SITEID}>{site.properties.SITENAME}</h1>
               <div className="description-secondary">
                 <span className="site-descript addr">
                   <h3>Address: </h3> {site.properties.ADDRESS}
                 </span>
-                <span className="site-descript year-built">
+                <span className="site-descript yearbuilt">
                   <h3>Year Built: </h3> {site.properties.YEARBUILT}
                 </span>
                 <span className="site-descript style">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from '../Sites/Header.js'
+import Header from './Header'
 import Sites from '../Sites/'
 import {Link} from 'react-router-dom'
 
@@ -20,7 +20,7 @@ class AllSites extends Component {
         />
         <div className="list">
           {this.props.filterSites.map((site,i) =>
-            <Link to={`/sites/${site.properties.SITEID}`} key={i}>
+            <Link to={`/sites/${site.properties.SITEID}`} key={i} style={{ textDecoration: 'none' }}>
               <Sites key={site.properties.SITEID} properties={site.properties} />
             </Link>
           )}
