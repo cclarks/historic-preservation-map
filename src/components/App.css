@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Roboto');
+
 
 html, body, h1, h2, h3, h4, h5, h6, p, canvas, div {
   display: flex;
@@ -39,7 +40,7 @@ h1 {
 
 .footer {
   display: flex;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   width: 100vw;
   height: 3vh;
