@@ -25,83 +25,162 @@ export default class SiteAll extends Component {
           <div className="all-info">
               <h1 key={site.properties.SITEID}>{site.properties.SITENAME}</h1>
               <div className="description-secondary">
+
+                <div className="site-descript-title">
+                  <h3>Address: </h3>
+                </div>
                 <span className="site-descript addr">
-                  <h3>Address: </h3> {site.properties.ADDRESS}
+                  {site.properties.ADDRESS}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Year Built: </h3>
+                </div>
                 <span className="site-descript yearbuilt">
-                  <h3>Year Built: </h3> {site.properties.YEARBUILT}
+                  {site.properties.YEARBUILT}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Style: </h3>
+                </div>
                 <span className="site-descript style">
-                  <h3>Style: </h3> {site.properties.STYLE}
+                  {site.properties.STYLE}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Description: </h3>
+                </div>
                 <span className="site-descript descript">
-                  <h3>Description: </h3> {site.properties.DESCRIPT}
+                  {site.properties.DESCRIPT}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Destroyed: </h3>
+                </div>
                 <span className="site-descript destroyed">
-                  <h3>Destroyed: </h3> {site.properties.DESTROYED}
+                  {site.properties.DESTROYED}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Survey Number: </h3>
+                </div>
                 <span className="site-descript survey-num">
-                  <h3>Survey Number: </h3> {site.properties.SURVEYNUM}
+                  {site.properties.SURVEYNUM}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Architect: </h3>
+                </div>
                 <span className="site-descript architect">
-                  <h3>Architect: </h3> {site.properties.ARCHITECT}
+                  {site.properties.ARCHITECT}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Survey Value: </h3>
+                </div>
                 <span className="site-descript surveval">
-                  <h3>Survey Value: </h3> {site.properties.SURVEVAL}
+                  {site.properties.SURVEVAL}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Survey Distance: </h3>
+                </div>
                 <span className="site-descript survedist">
-                  <h3>Survey Distance: </h3> {site.properties.SURVEDIST}
+                  {site.properties.SURVEDIST}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Shpoe Value: </h3>
+                </div>
                 <span className="site-descript shpoeval">
-                  <h3>Shpoe Value: </h3> {site.properties.SHPOEVAL}
+                  {site.properties.SHPOEVAL}
                 </span>
+                <div className="site-descript-title">
+                  <h3>D NR Listed: </h3>
+                </div>
                 <span className="site-descript d-nrlisted">
-                  <h3>D NR Listed: </h3> {site.properties.D_NRLISTED}
+                  {site.properties.D_NRLISTED}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Plot Method: </h3>
+                </div>
                 <span className="site-descript plotmthd">
-                  <h3>Plot Method: </h3> {site.properties.PLOTMTHD}
+                  {site.properties.PLOTMTHD}
                 </span>
+                <div className="site-descript-title">
+                  <h3>FGDLAQ Date: </h3>
+                </div>
                 <span className="site-descript fglaqdate">
-                  <h3>FGDLAQ Date: </h3> {site.properties.FGDLAQDATE}
+                  {site.properties.FGDLAQDATE}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Auto ID: </h3>
+                </div>
                 <span className="site-descript autoid">
-                  <h3>Auto ID: </h3> {site.properties.AUTOID}
+                  {site.properties.AUTOID}
                 </span>
+                <div className="site-descript-title">
+                  <h3>FID City: </h3>
+                </div>
                 <span className="site-descript fid-city-l">
-                  <h3>FID City: </h3> {site.properties.FID_CITY_L}
+                  {site.properties.FID_CITY_L}
                 </span>
+                <div className="site-descript-title">
+                  <h3>Ext Plan: </h3>
+                </div>
                 <span className="site-descript ext-plan">
-                  <h3>Ext Plan: </h3> {site.properties.EXTPLAN}
+                  {site.properties.EXTPLAN}
                 </span>
+                <div className="site-descript-title">
+                  <h3>STRUCSYS1: </h3>
+                </div>
                 <span className="site-descript strucsys1">
-                  <h3>STRUCSYS1: </h3> {site.properties.STRUCSYS1}
+                  {site.properties.STRUCSYS1}
                 </span>
+                <div className="site-descript-title">
+                  <h3>STRUCSYS2: </h3>
+                </div>
                 <span className="site-descript strucsys2">
-                  <h3>STRUCSYS2: </h3> {site.properties.STRUCSYS2}
+                  {site.properties.STRUCSYS2}
                 </span>
+                <div className="site-descript-title">
+                  <h3>STRUCSYS3: </h3>
+                </div>
                 <span className="site-descript strucsys3">
-                  <h3>STRUCSYS3: </h3> {site.properties.STRUCSYS3}
+                  {site.properties.STRUCSYS3}
                 </span>
+                <div className="site-descript-title">
+                  <h3>EXTFABRIC1: </h3>
+                </div>
                 <span className="site-descript extfabric1">
-                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC1}
+                  {site.properties.EXTFABRIC1}
                 </span>
+                <div className="site-descript-title">
+                  <h3>EXTFABRIC1: </h3>
+                </div>
                 <span className="site-descript extfabric2">
-                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC2}
+                  {site.properties.EXTFABRIC2}
                 </span>
+                <div className="site-descript-title">
+                  <h3>EXTFABRIC1: </h3>
+                </div>
                 <span className="site-descript extfabric3">
-                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC3}
+                  {site.properties.EXTFABRIC3}
                 </span>
+                <div className="site-descript-title">
+                  <h3>EXTFABRIC1: </h3>
+                </div>
                 <span className="site-descript extfabric4">
-                  <h3>EXTFABRIC1: </h3> {site.properties.EXTFABRIC4}
+                  {site.properties.EXTFABRIC4}
                 </span>
+                <div className="site-descript-title">
+                  <h3>STRUCTURE USE 1: </h3>
+                </div>
                 <span className="site-descript strucuse1">
-                  <h3>STRUCTURE USE 1: </h3> {site.properties.STRUCUSE1}
+                  {site.properties.STRUCUSE1}
                 </span>
+                <div className="site-descript-title">
+                  <h3>STRUCTURE USE 2: </h3>
+                </div>
                 <span className="site-descript strucuse2">
-                  <h3>STRUCTURE USE 2: </h3> {site.properties.STRUCUSE2}
+                  {site.properties.STRUCUSE2}
                 </span>
+                <div className="site-descript-title">
+                  <h3>STRUCTURE USE 3: </h3>
+                </div>
                 <span className="site-descript strucuse3">
-                  <h3>STRUCTURE USE 3: </h3> {site.properties.STRUCUSE3}
+                  {site.properties.STRUCUSE3}
                 </span>
               </div>
           </div>
