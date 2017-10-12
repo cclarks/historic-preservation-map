@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import MapboxGl from "mapbox-gl/dist/mapbox-gl.js";
+import { RotationControl } from "react-mapbox-gl";
+
 import { withRouter } from 'react-router-dom'
 
 class Map extends Component {
