@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import injectTapEventPlugin from 'react-tap-event-plugin'
+// import injectTapEventPlugin from 'react-tap-event-plugin'
 import { render } from 'react-dom'
 
 // Needed for onTouchTap
@@ -12,7 +12,7 @@ import Map from './Map/Map'
 
 import './App.css'
 
-injectTapEventPlugin()
+// injectTapEventPlugin()
 
 class App extends Component {
 

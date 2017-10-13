@@ -59,15 +59,11 @@ export default class SideBar extends Component {
 
   updateSearch = (event) => {
     console.log(event.target.value)
-    this.setState({search: event.target.value.substr(0, 25)})
+    this.setState({search: event.target.value.substr(0, 30)})
   }
 
   setSort = (event) => {
     this.setState({sort: event.target.value})
-  }
-
-  componentWillMount() {
-
   }
 
   render() {
@@ -119,7 +115,7 @@ export default class SideBar extends Component {
                       component={SiteAll}
                     />
                 </Switch>
-                </CSSTransitionGroup>
+              </CSSTransitionGroup>
             )}/>
           </div>
         </div>
