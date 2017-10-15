@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Quicksand');
 
 .about {
   display: flex;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .sidepanel {
@@ -36,6 +36,9 @@
   min-width: 5vw;
 }
 
+
+/*SEARCH BAR*/
+
 .fa-search {
   color:rgb(156, 156, 156);
   margin-right: .5em;
@@ -43,7 +46,7 @@
 
 .search {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   flex: 1;
@@ -62,7 +65,7 @@ input {
   user-select: text;
   cursor: auto;
   margin-left: 12px;
-  /*padding: 1px;*/
+  width: 90%;
 }
 
 input, textarea, select, button {
@@ -78,6 +81,33 @@ input, textarea, select, button {
   font: 11px;
 }
 
+.search-container {
+  width: 14vw;
+  margin: 0 auto;
+}
+
+.input {
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid rgb(156, 156, 156);
+  outline: none;
+}
+
+.input:focus {
+  border: 1px solid rgb(51, 155, 166);
+  transition: 0.35s ease;
+  color: rgb(51, 155, 166);
+}
+
+/*END SEARCH BAR*/
+
+
+/*SORT STYLES*/
+
 .container-sort {
   width: 11vw;
   min-width: 11vw;
@@ -89,16 +119,30 @@ input, textarea, select, button {
 }
 
 .sort-select {
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(156, 156, 156);
   flex: 1;
-  border: none;
-  box-sizing: border-box;
-  align-items: center;
-  white-space: pre;
-  cursor: default;
-  border-radius: 5px;
-  background: none;
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid rgb(156, 156, 156);
   outline: none;
 }
+
+.sort-select:focus {
+  border: 1px solid rgb(51, 155, 166);
+  transition: 0.35s ease;
+  color: rgb(51, 155, 166);
+}
+
+.option {
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(156, 156, 156);
+}
+
+/*END SORT STYLES*/
 
 .list {
   overflow: auto;
@@ -144,8 +188,8 @@ input, textarea, select, button {
   line-height: 16px;
   display: inline-flex;
   justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
+  /*align-items: center;*/
+  flex-direction: column;
 }
 
 .address, .year-built {
@@ -153,6 +197,10 @@ input, textarea, select, button {
   font-weight: 400;
   text-transform: uppercase;
   color: #808492;
+}
+
+.year-built {
+  margin-top: -.6em;
 }
 
 .image {

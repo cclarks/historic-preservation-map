@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Quicksand');
 
 
 html, body, h1, h2, h3, h4, h5, h6, p, canvas, div {
@@ -29,6 +29,8 @@ h1 {
   color: #394c5b;
   font-weight: bold;
   line-height: 24px;
+  font-family: 'Arvo', serif;
+  letter-spacing: .1em;
 }
 
 .Map {
@@ -40,8 +42,9 @@ h1 {
 
 .footer {
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
+  color: rgb(156, 156, 156);
   width: 100vw;
   height: 3vh;
 }
@@ -62,8 +65,10 @@ h1 {
   text-transform: capitalize;
 }
 
+.footer-div a:visited {
+  color: rgb(156, 156, 156);
+}
 
-.pink{
-  height: 10px;
-  width: 10px;
+.footer-div a:hover {
+  color: rgb(51, 155, 166);
 }

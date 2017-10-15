@@ -8,8 +8,9 @@ const Sites = (props) =>
                 <h1 key={props.properties.SITEID}>{props.properties.SITENAME}</h1>
               </div>
               <div className="description-secondary-all-sites">
-                <span className="address">{props.properties.ADDRESS} </span>
-                <span className="year-built"> | {props.properties.YEARBUILT}</span>
+                <h3 className="address">{props.properties.ADDRESS}  </h3>
+                <br />
+                <h3 className="year-built"> {props.properties.YEARBUILT}</h3>
               </div>
           </div>
         </div>
