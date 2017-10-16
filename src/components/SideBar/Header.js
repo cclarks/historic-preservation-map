@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Library from '../../assets/library.svg'
+import Logo from '../../assets/logo-01.png'
+
 
 import './index.css'
 
@@ -13,8 +14,7 @@ class Header extends Component {
       <div className="container-header">
 
         <div className="icon">
-          <svg width="24px" height="24px" viewBox="0 0 24 24">{Library}
-          </svg>
+          <img src={Logo} />
         </div>
 
         <div className="search-container search">
