@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Library from '../../assets/logo-01.png'
+import Logo from '../../assets/logo-01.png'
+
 
 import './index.css'
 
@@ -13,7 +14,7 @@ class Header extends Component {
       <div className="container-header">
 
         <div className="icon">
-          <img src={Library} />
+          <img src={Logo} />
         </div>
 
         <div className="search-container search">
