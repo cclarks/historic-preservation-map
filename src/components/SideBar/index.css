@@ -29,13 +29,17 @@
 
 .icon {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-right: 1px solid rgb(156, 156, 156);
   width: 5vw;
   min-width: 5vw;
 }
 
+.icon img {
+  width: 5em;
+  height: 5em;
+}
 
 /*SEARCH BAR*/
 
