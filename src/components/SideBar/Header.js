@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Logo from '../../assets/logo-01.png'
 
-
 import './index.css'
 
 class Header extends Component {
@@ -14,7 +13,8 @@ class Header extends Component {
       <div className="container-header">
 
         <div className="icon">
-          <img src={Logo} />
+          <span className="icon-logo">HIST</span>
+          <span className="icon-logo">ORIA</span>
         </div>
 
         <div className="search-container search">

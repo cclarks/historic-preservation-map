@@ -30,15 +30,17 @@
 .icon {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   border-right: 1px solid rgb(156, 156, 156);
   width: 5vw;
   min-width: 5vw;
 }
 
-.icon img {
-  width: 5em;
-  height: 5em;
+.icon-logo {
+  font-family: "Arvo", serif;
+  font-size: 2em;
+  color: rgb(56,76,91)
 }
 
 
