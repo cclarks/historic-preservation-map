@@ -13,8 +13,10 @@ class Header extends Component {
       <div className="container-header">
 
         <div className="icon">
+          <a hrc="http://codyclark.co/historic-preservation-map/">
           <span className="icon-logo">HIST</span>
           <span className="icon-logo">ORIA</span>
+          </a>
         </div>
 
         <div className="search-container search">
