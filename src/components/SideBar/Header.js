@@ -27,6 +27,13 @@ class Header extends Component {
             value={this.props.search}
             onChange={this.props.updateSearch}
           />
+          <input
+            className="input-small"
+            type="search"
+            placeholder="Search"
+            value={this.props.search}
+            onChange={this.props.updateSearch}
+          />
         </div>
 
         <div className="container-sort">
